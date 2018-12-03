@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Home from './components/Home';
+import { Provider } from 'react-redux';
+import store from './store'; 
+
+var App = () => {
+    return (
+        <Provider store={store}>
+            <Home/>
+        </Provider>
+    );  
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
